@@ -4,15 +4,18 @@ const cors = require("cors");
 const db = require("./util/db");
 const router = require("./routes/slotRoutes");
 
-const corsOptions = {
-  origin: ["http://localhost:3000", "http://127.0.0.1:5500"],
-  credentials: true,
-  method: ["GET", "POST", "PUT", "DELETE", "PATCH"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-};
+// const corsOptions = {
+//   origin: [
+//     "http://localhost:3000",
+//     "https://vishal101022.github.io/slot-booking/",
+//   ],
+//   credentials: true,
+//   method: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+//   allowedHeaders: ["Content-Type", "Authorization"],
+// };
 
 const app = express();
-app.use(cors(corsOptions));
+//app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use('/', router);
 
